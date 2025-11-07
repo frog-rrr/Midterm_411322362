@@ -66,7 +66,7 @@ botton_overview.pack(pady=25)
 
 def delete_student():
     student_id = entry_id.get()
-    cursor.execute('SELECT * from DB_student where db_student_id = ?',(student_id,))
+    cursor.execute('SELECT * from DB_student where db_student_id = ?',(student_id,)) 
     delete = cursor.fetchall()
     cursor.execute('DELETE from DB_student where db_student_id = ?',(student_id,))
     print('Following row is delete:',delete)
